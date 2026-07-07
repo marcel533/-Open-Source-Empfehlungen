@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.bunny.net/css?family=orbitron:wght@400;900|inter:wght@400;700" rel="stylesheet" />
+<title>Meine Open-Source Empfehlungen</title>
+    <style>
+        :root {
+            --bg-color: #121214;
+            --card-bg: #1a1a1e;
+            --accent-color: #3b82f6;
+            --text-color: #e4e4e7;
+            --text-muted: #a1a1aa;
+            --ad-color: #f59e0b; /* Gold/Amber Farbe für die Werbung */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            border: 1px solid #2d2d34;
+            background-color: var(--card-bg);
+            color: #fff;
+            font-size: 1rem;
+            margin: 1.5rem auto 0 auto;
+            display: block;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-bar:focus {
+            border-color: var(--accent-color);
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            color: #fff;
+            margin: 3rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #2d2d34;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            border: 1px solid #2d2d34;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-2px);
+            border-color: #3f3f46;
+        }
+
+        /* Spezielles Styling für die Werbung */
+        .app-card.ad-card {
+            border-color: var(--ad-color);
+            background-image: linear-gradient(135deg, #1a1a1e 0%, #241e15 100%);
+            margin-bottom: 2rem;
+        }
+
+        .app-card.ad-card .app-category {
+            color: var(--ad-color);
+        }
+
+        .app-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .app-title {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .app-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            background-color: #27272a;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Button-Hovereffekt für die Werbung */
+        .app-card.ad-card .btn:hover {
+            background-color: var(--ad-color);
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Meine Open-Source Empfehlungen</h1>
+            <p>Freie Software, die jeder auf seinem PC oder Smartphone haben sollte.</p>
+            <input type="text" id="search" class="search-bar" placeholder="Durchsuchen...">
+        </header>
+
+        <main id="appsContainer">
+            
+            <div class="app-card ad-card" id="adCard" data-title="Keep Android Open">
+                <div>
+                    <div class="app-category">Anzeige / Partner</div>
+                    <div class="app-title">Keep Android Open</div>
+                    <div class="app-desc">Eine Initiative, die sich für die Freiheit, Unabhängigkeit und Offenheit des Android-Betriebssystems einsetzt. Schau vorbei!</div>
+                </div>
+                <a href="https://keepandroidopen.org/" target="_blank" class="btn">Website besuchen</a>
+            </div>
+
+            <h2 class="section-title">Unternehmen & Communities</h2>
+            <div class="apps-grid">
+                
+               <div class="app-card" data-title="GIMP">
+                <div>
+                    <div class="app-category">Design</div>
+                    <div class="app-title">GIMP</div>
+                    <div class="app-desc">Das mächtigste kostenlose Bildbearbeitungsprogramm. Perfekt als Open-Source-Alternative zu Adobe Photoshop.</div>
+                </div>
+                <a href="https://www.gimp.org/" target="_blank" class="btn">Website öffnen</a>
+            </div>
+
+ <div class="app-card" data-title="Fossify">
+                    <div>
+                        <div class="app-category">Community</div>
+                        <div class="app-title">Fossify</div>
+                        <div class="app-desc">Eine Open-Source-Community mit vielen quelloffenen Apps – komplett werbefrei und ohne Datensammlung.</div>
+                    </div>
+                    <a href="https://fossify.org/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+                <div class="app-card" data-title="Proton">
+                    <div>
+                        <div class="app-category">Unternehmen</div>
+                        <div class="app-title">Proton</div>
+                        <div class="app-desc">Ein auf Privatsphäre fokussiertes Unternehmen mit verschlüsselter E-Mail, Authentifikator, Cloud-Speicher und mehr.</div>
+                    </div>
+                    <a href="https://proton.me/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+            </div>
+
+            <h2 class="section-title">Apps & Software</h2>
+            <div class="apps-grid">
+
+                <div class="app-card" data-title="VS Code">
+                    <div>
+                        <div class="app-category">Entwicklung</div>
+                        <div class="app-title">VS Code (VSCodium)</div>
+                        <div class="app-desc">Der wahrscheinlich beste und flexibelste Code-Editor der Welt. Extrem viele Erweiterungen für fast jede Programmiersprache.</div>
+                    </div>
+                    <a href="https://vscodium.org/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+<div class="app-card" data-title="Fossify Messenger - Open Source Chat-App">
+    <div>
+        <div class="app-category">Datenschutz & Kommunikation</div>
+        <div class="app-title">Fossify Messenger</div>
+        <div class="app-desc">Open-Source-Nachrichten-App ohne Werbung oder Tracking. Lokale SMS/MMS-Kommunikation mit Privatsphäre-Fokus.</div>
+    </div>
+    <a href="https://github.com/FossifyOrg/Messages" target="_blank" rel="noopener noreferrer" class="btn">Website öffnen</a>
+</div>
+
+
+<div class="app-card" data-title="Mullvad VPN">
+    <div>
+        <div class="app-category">Privacy & Security & VPN </div>
+        <div class="app-title">Mullvad VPN</div>
+        <div class="app-desc">Ein führender Open-Source-VPN-Dienst mit strikter No-Logs-Policy, Cash-Zahlungsmöglichkeiten und Fokus auf maximale Anonymität.</div>
+    </div>
+    <a href="https://mullvad.net/" target="_blank" class="btn">Website öffnen</a>
+</div>
+
+<div class="app-card" data-title="Fossify Phone - Open Source Telefon-App">
+    <div>
+        <div class="app-category">Datenschutz & Kommunikation</div>
+        <div class="app-title">Fossify Phone</div>
+        <div class="app-desc">Open-Source-Dialer-App ohne Werbung oder Tracking. Community-getreuer Fork von Simple Mobile Tools mit Fokus auf Privatsphäre.</div>
+    </div>
+    <a href="https://github.com/FossifyOrg/Phone" target="_blank" rel="noopener noreferrer" class="btn">Website öffnen</a>
+</div>
+
+<div class="app-card" data-title="Thunderbird">
+                    <div>
+                        <div class="app-category">Mail Client</div>
+                        <div class="app-title">Thunderbird</div>
+                        <div class="app-desc">Ein Open-Source-Mail-Client.</div>
+                    </div>
+                    <a href="https://www.thunderbird.net/en-GB/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+<div class="app-card" data-title="Invidious - Datenschutzfreundliche YouTube-Alternative">
+    <div>
+        <div class="app-category">Datenschutz & Medien</div>
+        <div class="app-title">Invidious</div>
+        <div class="app-desc">Eine datenschutzorientierte Alternative zu YouTube. Videos ohne Werbung, Tracking oder Anmeldung ansehen.</div>
+    </div>
+    <a href="https://invidious.tiekoetter.com" target="_blank" rel="noopener noreferrer" class="btn">Website öffnen</a>
+</div>
+
+<div class="app-card" data-title="Proton VPN">
+    <div>
+        <div class="app-category">Privacy & Security</div>
+        <div class="app-title">Proton VPN</div>
+        <div class="app-desc">Open-Source-VPN aus der Schweiz mit No-Logs-Policy, Swiss Privacy-Schutz, integrierter NetShield DNS-Filterung und Secure Core – ideal für Nutzer des Proton-Ökosystems.</div>
+    </div>
+    <a href="https://proton.me/vpn" target="_blank" class="btn">Website öffnen</a>
+</div> 
+
+<div class="app-card" data-title="fossify">
+                    <div>
+                        <div class="app-category">fossify</div>
+                        <div class="app-title">Fossify Carlendar</div>
+                        <div class="app-desc">ein opensource carlendar mit lokaler sicherung ,frei verfügbar</div>
+                    </div>
+                    <a href="https://github.com/FossifyOrg/Calendar" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+<div class="app-card" data-title="fossify keybord">
+                    <div>
+                        <div class="app-category">fossify</div>
+                        <div class="app-title">fossify keybord</div>
+                        <div class="app-desc"> die beste keybord Source  app ohne daten speicherung ad*frei </div>
+                    </div>
+                    <a href="https://github.com/FossifyOrg/Keyboard" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+<div class="app-card" data-title="KeePassXC">
+                    <div>
+                        <div class="app-category">Sicherheit</div>
+                        <div class="app-title">KeePassXC</div>
+                        <div class="app-desc">Eine App, mit der du deine Passwörter sicher lokal speichern kannst (ohne Cloud).</div>
+                    </div>
+                    <a href="https://keepassxc.org/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+<div class="app-card" data-title="OpenWeatherMap">
+                    <div>
+                        <div class="app-category">Wetter</div>
+                        <div class="app-title">OpenWeatherMap</div>
+                        <div class="app-desc">Eine Open-Source-Wetter-App mit Wetterinfos von GeoSphere Austria.</div>
+                    </div>
+                    <a href="https://openweathermap.org/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+<div class="app-card" data-title="Mines - Open Source Minen-Sucher">
+    <div>
+        <div class="app-category">Spiele & Open Source</div>
+        <div class="app-title">Mines</div>
+        <div class="app-desc">Ein Open-Source-Spiel im Stil des klassischen Minensuchers. Vollständig lokal, keine Werbung, keine Tracking-Daten.</div>
+    </div>
+    <a href="https://github.com/StefanOltmann/mines" target="_blank" rel="noopener noreferrer" class="btn">Website öffnen</a>
+</div>
+
+<div class="app-card" data-title="Fossify Kontakte - Open Source Adressbuch">
+    <div>
+        <div class="app-category">Datenschutz & Kommunikation</div>
+        <div class="app-title">Fossify Kontakte</div>
+        <div class="app-desc">Open-Source-Adressbuch ohne Werbung oder Cloud-Sync. Verwalte deine Kontaktdaten lokal und datenschutzfreundlich.</div>
+    </div>
+    <a href="https://github.com/FossifyOrg/Contacts" target="_blank" rel="noopener noreferrer" class="btn">Website öffnen</a>
+</div>
+
+<div class="app-card" data-title="Fossify Notizen">
+    <div>
+        <div class="app-category">Notizen & Open Source & fossify</div>
+        <div class="app-title">Fossify Notizen</div>
+        <!-- Beschreibung: Fokus auf Offline-Nutzung und Abwesenheit von Trackern -->
+        <div class="app-desc">Eine einfache, schnelle Notiz-App als Community-Fork der klassischen Simple Mobile Tools. 
+            <br><strong>Privatsphäre-Sicherheit:</strong> Keine Werbung, keine Verfolgung und <em>kein Zugriff auf das Internet</em>. Deine Daten bleiben zu 100% offline auf deinem Gerät – kein Sign-In erforderlich.</div>
+    </div>
+    <a href="https://github.com/FossifyOrg/Notes" target="_blank" class="btn">GitHub Repository öffnen</a>
+</div>
+
+  <div class="app-card" data-title="Nextcloud">
+                    <div>
+                        <div class="app-category">Cloud & Entwicklung</div>
+                        <div class="app-title">Nextcloud</div>
+                        <div class="app-desc">Eine sichere Self-Hosting-Cloud für Teams und mehr.</div>
+                    </div>
+                    <a href="https://nextcloud.org" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+<div class="app-card" data-title="LocalSend">
+                    <div>
+                        <div class="app-category">Netzwerk</div>
+                        <div class="app-title">LocalSend</div>
+                        <div class="app-desc">Eine App, mit der du Dateien in deinem Netzwerk verschicken kannst. Werbefrei, kein Account, kostenlos.</div>
+                    </div>
+                    <a href="https://localsend.org/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+   <div class="app-card" data-title="Element">
+                    <div>
+                        <div class="app-category">Messenger</div>
+                        <div class="app-title">Element</div>
+                        <div class="app-desc">Ein sehr sicherer, Open-Source-Messenger.</div>
+                    </div>
+                    <a href="https://element.io/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+                <div class="app-card" data-title="Ente Fotos">
+                    <div>
+                        <div class="app-category">Sicherheit</div>
+                        <div class="app-title">Ente Photos</div>
+                        <div class="app-desc">Eine App, die deine Fotos Ende-zu-Ende verschlüsselt in einer sicheren Cloud speichert. Bietet 10 GB kostenlosen Speicherplatz.</div>
+                    </div>
+                    <a href="https://ente.com/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+<div class="app-card" data-title="Jellyfin">
+                    <div>
+                        <div class="app-category">Medien</div>
+                        <div class="app-title">Jellyfin</div>
+                        <div class="app-desc">Eine kostenlose, Open-Source-Media-App zum Selbsthosten.</div>
+                    </div>
+                    <a href="https://jellyfin.org/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+  <div class="app-card" data-title="Ente Auth">
+                    <div>
+                        <div class="app-category">Sicherheit</div>
+                        <div class="app-title">Ente Auth</div>
+                        <div class="app-desc">Eine App, mit der du 2FA-Tokens sicher verwalten und aktivieren kannst.</div>
+                    </div>
+                    <a href="https://ente.com/auth" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+
+
+  <div class="app-card" data-title="OsmAnd">
+                    <div>
+                        <div class="app-category">Karten</div>
+                        <div class="app-title">OsmAnd</div>
+                        <div class="app-desc">Eine Open-Source-Karten-App mit vielen Funktionen (Pay-and-Free).</div>
+                    </div>
+                    <a href="https://osmand.net/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+
+  <div class="app-card" data-title="Organic Maps">
+                    <div>
+                        <div class="app-category">Karten</div>
+                        <div class="app-title">Organic Maps</div>
+                        <div class="app-desc">Eine Karten-App, die komplett Open-Source, werbefrei ist und offline funktioniert.</div>
+                    </div>
+                    <a href="https://organicmaps.app/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+                <div class="app-card" data-title="VLC Media Player">
+                    <div>
+                        <div class="app-category">Multimedia</div>
+                        <div class="app-title">VLC Media Player</div>
+                        <div class="app-desc">Ein echter Klassiker. Spielt absolut jedes Video- und Audioformat ab, ohne dass man extra Codecs installieren muss.</div>
+                    </div>
+                    <a href="https://www.videolan.org/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+                <div class="app-card" data-title="Signal">
+                    <div>
+                        <div class="app-category">Messenger</div>
+                        <div class="app-title">Signal</div>
+                        <div class="app-desc">Ein sicherer Open-Source-Messenger, der deine Privatsphäre kompromisslos schützt – komplett kostenlos.</div>
+                    </div>
+                    <a href="https://signal.org/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+                <div class="app-card" data-title="Bitwarden">
+                    <div>
+                        <div class="app-category">Sicherheit</div>
+                        <div class="app-title">Bitwarden</div>
+                        <div class="app-desc">Ein sicherer Open-Source-Passwort-Manager, der deine Logins geräteübergreifend synchronisiert – komplett kostenlos.</div>
+                    </div>
+                    <a href="https://bitwarden.com/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+                <div class="app-card" data-title="LibreOffice">
+                    <div>
+                        <div class="app-category">Produktivität</div>
+                        <div class="app-title">LibreOffice</div>
+                        <div class="app-desc">Die perfekte, kostenlose Alternative zu Microsoft Office. Enthält Textverarbeitung, Tabellenkalkulation und Präsentationen.</div>
+                    </div>
+                    <a href="https://www.libreoffice.org/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+                <div class="app-card" data-title="Brave Browser">
+                    <div>
+                        <div class="app-category">Internet</div>
+                        <div class="app-title">Brave Browser</div>
+                        <div class="app-desc">Ein extrem schneller, auf Chromium basierender Webbrowser, der standardmäßig Tracker und nervige Werbung blockiert.</div>
+                    </div>
+                    <a href="https://brave.com/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+
+<div class="app-card" data-title="proton lumo">
+                    <div>
+                        <div class="app-category">proton </div>
+ <div class="app-category">ai </div>
+                        <div class="app-title">lumo</div>
+                        <div class="app-desc">Lumo – Dein privacy-first KI-Assistent von Proton
+🤖 Was es kann: Beantwortet Fragen, schreibt Texte, analysiert Dateien und sucht im Web. Unterstützt Spracheingabe, Code-Erstellung und 11 Sprachen auf allen Geräten (Web, iOS, Android).
+✅ Datenschutz: Ende-zu-Ende-Verschlüsselung aller Gespräche. Kein Datenverkauf, keine Werbung, kein Training mit deinen privaten Chats.
+🟢 Open Source: Ja! Die Client-Codes sind quelloffen (GitHub verfügbar) für volle Transparenz. Nutzt automatische Routing-Systeme für verschiedene spezialisierte Modelle.</div>
+                    </div>
+                    <a href="https://lumo.proton.me/" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+
+
+  <div class="app-card" data-title="proton auth">
+                    <div>
+                        <div class="app-category">proton</div>
+                        <div class="app-title">proton auth</div>
+                        <div class="app-desc">Proton Authenticator (Auth) – Der sichere, verschlüsselte 2FA-Manager
+🔐 Was es kann: Generiert TOTP-Codes offline, synchronisiert sie Ende-zu-Ende-verschlüsselt über alle Geräte (inkl. Desktop) und bietet Import/Export von Codes. Biometrie-Sperre & Backup-Optionen sind integriert.
+✅ Datenschutz: End-to-End-Verschlüsselung (AES-256), keine Datenerhebung, Codes bleiben privat (sogar für Proton).
+🟢 Open Source: Ja! Vollständig quelloffen, transparent und unabhängig überprüfbar (GitHub verfügbar).</div>
+                    </div>
+                    <a href="https://proton.me/authenticator/download" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+
+ <h2 class="section-title">nicht openSource</h2>
+            <div class="apps-grid">
+
+<div class="app-card" data-title="ai dedector">
+                    <div>
+                        <div class="app-category">ai</div>
+                        <div class="app-title">Al Detector QuickTile Analysis</div>
+                        <div class="app-desc">Eine app mit der du videos bilder und mehr ai detectorn kannst, risiko weil es nicht Open Source ist</div>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.aidetector.app" target="_blank" class="btn">Website öffnen</a>
+                </div>
+
+   <div class="app-card" data-title="Obsidian">
+    <div>
+        <div class="app-category">Wissensmanagement & Notizen</div>
+        <div class="app-title">Obsidian - Ein zweites Gehirn</div>
+        <!-- Beschreibung: Fokus auf lokale Markdown-Dateien und Privatsphäre -->
+        <div class="app-desc">Eine kraftvolle Wissensbasis, die direkt in deinen lokalen Ordnern auf Markdown-Dateien basiert. 
+            <br><strong>Datenschutz-Vorteil:</strong> Deine Daten gehören dir – 100% lokal gespeichert ohne Erzwingung einer Cloud-Anmeldung oder Sign-In-Pflicht.</div>
+    </div>
+    <a href="https://obsidian.md/" target="_blank" class="btn">Webseite öffnen</a>
+</div>
+
+        <!-- Wispr Flow Card -->
+        <article class="app-card" data-title="wispr-flow" data-privacy-score="medium" data-open-source="false">
+            <header>
+                <div class="app-category">AI & Speech</div>
+                <h2 class="app-title">Wispr Flow</h2>
+            </header>
+            <div class="app-desc">
+                Real-time voice-to-text mit Support für Code und Formatierung.
+                <br><br>
+                <span class="status-badge badge-secure">🔒 SOC 2 / HIPAA Certified</span>
+                <span class="status-badge badge-secure">🚫 Zero Data Retention</span>
+                <span class="status-badge badge-closed">⛔ Proprietary (No Self-Hosting)</span>
+            </div>
+            <a href="https://wisprflow.ai/" target="_blank" rel="noopener noreferrer" class="btn">Website öffnen</a>
+        </article>
+
+<div class="app-card" data-title="uBlockDNS">
+    <div>
+        <div class="app-category">Privacy & Security</div>
+        <div class="app-title">uBlockDNS</div>
+        <div class="app-desc">DNS-Level Werbe-, Tracker- und Malware-Filterung. Blockiert Schädlinge bevor sie dein Gerät erreichen – geräteübergreifend ohne Zusatzsoftware.</div>
+    </div>
+    <a href="https://ublockdns.com/" target="_blank" class="btn">Website öffnen</a>
+</div>
+
+<div class="app-card" data-title="Live Wallpapers">
+    <div>
+        <div class="app-category">Hintergrundbilder & Designs</div>
+        <div class="app-title">Live Wallpapers by AppsLab</div>
+        <!-- Beschreibung: Originalinhalt + neuer Hinweis auf das Google-Risiko -->
+        <div class="app-desc">Entdecke Tausende fantastische Live-Hintergründe zur Personalisierung deines Geräts. 
+            <br><strong>Risikohinweis:</strong> Für die Nutzung ist eine Google-Anmeldung (Sign-In) zwingend erforderlich, was Datenschutzbedenken bei privatsphärenorientierten Nutzern aufwirft.</div>
+    </div>
+    <a href="https://play.google.com/store/apps/details?id=com.appslab.live.wallpapers" target="_blank" class="btn">App im Store öffnen</a>
+</div>
+
+
+
+        <!-- OneBattery Card -->
+        <article class="app-card" data-title="onebattery" data-privacy-score="high" data-open-source="false">
+            <header>
+                <div class="app-category">System Tools</div>
+                <h2 class="app-title">OneBattery: Monitor</h2>
+            </header>
+            <div class="app-desc">
+                Live Akku-Gesundheits-Tracking, Ampere/Watt Verlauf und AOD-Statistiken.
+                <br><br>
+                <span class="status-badge badge-secure">🔌 Kein Internet erforderlich</span>
+                <span class="status-badge badge-secure">📵 Keine Datenübertragung</span>
+                <span class="status-badge badge-closed">⛔ Closed Source (AppCanopy)</span>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.appcanopy.batteryvitals" target="_blank" rel="noopener noreferrer" class="btn">Play Store ansehen</a>
+        </article>
+    </main>
+
+</body>
+</html>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search');
+    const cards = document.querySelectorAll('.app-card');
+    
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase().trim();
+        
+        cards.forEach(card => {
+            const title = card.getAttribute('data-title').toLowerCase();
+            const desc = card.querySelector('.app-desc').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 diamond8sniper Open-Source Empfehlungen</p>
+        </footer>
+    </div>
+
+</body>
+</html>
