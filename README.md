@@ -11,3 +11,7 @@ Ein minimalistisches, datenschutzfreundliches Dark-Mode-Dashboard für Software-
 ## 🛠️ Tech Stack
 * HTML & CSS (mit CSS-Variables für einfaches Customizing)
 *  JavaScript 
+---
+
+---
+The css is fully generated with AI
