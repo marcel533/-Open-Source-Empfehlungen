@@ -12,6 +12,6 @@ Ein minimalistisches, datenschutzfreundliches Dark-Mode-Dashboard für Software-
 * HTML & CSS (mit CSS-Variables für einfaches Customizing)
 *  JavaScript 
 ---
-
+URL:https://marcel533.github.io/-Open-Source-Empfehlungen/
 ---
 The css is fully generated with AI
