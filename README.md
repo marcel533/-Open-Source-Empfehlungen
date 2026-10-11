@@ -1,18 +1,37 @@
+<div align="right">
+  <a href="#english">EN</a> | <a href="#deutsch">DE</a>
+</div>
+
+---
+
+<div id="english"></div>
+
 # Open-Source-Empfehlungen
 
+A curated, dark-mode web directory for discovering high-quality open-source software, developer utilities, and privacy-focused tools. Designed for fast navigation and quick filtering, the interface features a minimalist, high-contrast dark layout with full bilingual support.
 
-Ein minimalistisches, datenschutzfreundliches Dark-Mode-Dashboard für Software-Empfehlungen mit integrierter Echtzeit-Suche.
+**Creator & Maintainer:** marcel533
 
-## ✨ Features
-* **Modern & Responsive:** CSS-Grid-Layout optimiert für Smartphone und Desktop.
-* **Echtzeit-Suche:** Blitzschnelles Filtern via Vanilla JS (keine schweren Bibliotheken).
-* **Privacy-First:** Nutzt Bunny Fonts anstelle von Google Fonts.
-
-## 🛠️ Tech Stack
-* HTML & CSS (mit CSS-Variables für einfaches Customizing)
-*  JavaScript 
 ---
-URL:https://marcel533.github.io/-Open-Source-Empfehlungen/
+
+### Live Application
+
+[marcel533.github.io/-Open-Source-Empfehlungen](https://marcel533.github.io/-Open-Source-Empfehlungen/)
+
+<br>
+<hr>
+<br>
+
+<div id="deutsch"></div>
+
+# Open-Source-Empfehlungen
+
+Ein strukturiertes Web-Verzeichnis im Dark Mode zum Entdecken von hochwertiger Open-Source-Software, Entwickler-Tools und Datenschutz-Anwendungen. Die Benutzeroberfläche setzt auf schnelles Filtern, ein minimalistisches, kontrastreiches Design und vollständige zweisprachige Unterstützung.
+
+**Ersteller & Entwickler:** marcel533
+
 ---
-The webpage is fully generated with AI
-The read.md is fully generated with ai
+
+### Live-Anwendung
+
+[marcel533.github.io/-Open-Source-Empfehlungen](https://marcel533.github.io/-Open-Source-Empfehlungen/)
